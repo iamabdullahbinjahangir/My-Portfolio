@@ -260,11 +260,25 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../video/intro.mp4") top right no-repeat;
-  background-size: cover;
+  overflow: hidden;
+}
+
+#hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#hero .container {
   position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 992px) {
